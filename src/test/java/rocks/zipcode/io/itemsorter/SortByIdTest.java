@@ -21,6 +21,7 @@ public class SortByIdTest {
         Item item2 = new Item(1L, "Banana", 1.5);
         Item item1 = new Item(2L, "Cherry", 2.0);
         Item[] itemsToSort = {item2, item1, item3};
+
         Item[] expected = {item3, item2, item1};
         ItemSorter itemSorter = new ItemSorter(itemsToSort);
         Comparator<Item> comparator = (Comparator<Item>) new IdComparator();
